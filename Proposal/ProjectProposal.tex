@@ -1,0 +1,123 @@
+\documentclass[12pt, letterpaper]{article}
+%\documentclass[12pt, letterpaper, titlepage]{article}
+
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{colorlinks = true, linkcolor = blue, citecolor=blue, urlcolor = blue}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{lipsum}
+\usepackage[square,numbers]{natbib}
+\bibliographystyle{abbrvnat}
+
+
+
+\usepackage[]{lineno}
+\linenumbers*[1]
+% %% patches to make lineno work better with amsmath
+\newcommand*\patchAmsMathEnvironmentForLineno[1]{%
+ \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
+ \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
+ \renewenvironment{#1}%
+ {\linenomath\csname old#1\endcsname}%
+ {\csname oldend#1\endcsname\endlinenomath}}%
+\newcommand*\patchBothAmsMathEnvironmentsForLineno[1]{%
+ \patchAmsMathEnvironmentForLineno{#1}%
+ \patchAmsMathEnvironmentForLineno{#1*}}%
+
+\AtBeginDocument{%
+ \patchBothAmsMathEnvironmentsForLineno{equation}%
+ \patchBothAmsMathEnvironmentsForLineno{align}%
+ \patchBothAmsMathEnvironmentsForLineno{flalign}%
+ \patchBothAmsMathEnvironmentsForLineno{alignat}%
+ \patchBothAmsMathEnvironmentsForLineno{gather}%
+ \patchBothAmsMathEnvironmentsForLineno{multline}%
+}
+
+% control floats
+\renewcommand\floatpagefraction{.9}
+\renewcommand\topfraction{.9}
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.1}
+\setcounter{totalnumber}{50}
+\setcounter{topnumber}{50}
+\setcounter{bottomnumber}{50}
+
+\newcommand{\jy}[1]{\textcolor{blue}{JY: #1}}
+\newcommand{\eds}[1]{\textcolor{red}{EDS: (#1)}}
+
+% NOTE: To produce blinded version, replace "0" with "1" below.
+\newcommand{\blind}{0}
+
+
+%\title{On Misuses of the Kolmogorov--Smirnov Test for One-Sample Goodness-of-Fit}
+%
+%\author{Anthony Zeimbekakis\\
+%%   \href{mailto:anthony.zeimbekakis@uconn.edu}
+%% {\nolinkurl{anthony.zeimbekakis@uconn.edu}}\\
+  %Elizabeth D.  Schifano\\
+  %Jun Yan\\[1ex]
+  %Department of Statistics, University of Connecticut\\
+%}
+%\date{}
+
+\begin{document}
+%\maketitle
+
+\if0\blind
+{
+  \title{\bf Project Proposal}
+  \author{Zoe Macris}
+\date{October 2023}
+  \maketitle} 
+
+%\doublespace
+
+\section{Introduction}
+\label{sec:intro}
+
+The topic for my paper will be a meta-analysis of research into variables that affect cycling as an individual’s mode of transport. This is impactful as biking is a more environmentally friendly alternative to transportation than cars, so factors that can increase the likelihood of biking are very important to evaluate. Cycling improvements can be anything from better bike lanes, improved social attitude to cycling, and road safety. There is a diverse array of research on this topic already, but often they focus on one distinct geographic location, like this study from New Orleans \cite{Parker2013}, on the impact of a new bike lane in the city. There is also diversity in whether a study focuses on one variable like protected bike lanes \cite{Karpinski2021}, or many covariates like in research on college campuses in the Baltimore Metropolitan Area \cite{Kelarestaghi2019}. Therefore, it is a topic of interest to investigate how the different ways of studying this issue can impact the results. Cycling is a mode of transport that is often under served infrastructure wise, so it is important to look into which improvements will serve it best, and furthermore what the body of research says and which method is most effective.
+
+
+\section{Specific Aims}
+\label{sec:fitted}
+
+The research question I am hoping to address is how different types of statistics analysis and research into improving cycling conditions compare to each other. From there, we can more confidently state what improvements need to be made to encourage and facilitate cycling. This meta-analyses will be used as knowledge accumulation for the field, and also to "identify important moderators where the results of different primary studies differ from each other" \citep{Hansen2022}.
+
+
+\section{Data and Methods}
+\label{sec:dependence}
+
+My data set will be a group of the studies that exist on the topic of cycling infrastructure improvements in online databases. I will chose from the databases that we are able to access through our UConn accounts, most likely Science Direct and JSTOR. With these, I will attempt to gather at least 20 studies, from doing a keyword search for “cycling infrastructure improvements” in at least these 2 databases to prevent bias. 
+
+The overall method will then be to decide inclusion criteria to determine which studies to include in my data set, and to try and ensure that there is a proportion of non-published and less cited articles in my data to combat the “Matthew Effect” where highly cited articles are found faster than less cited ones \cite{Hansen2022}. I will then use an effect size measure of z-transformed correlation coefficients, so that I am able to compare the articles. Then there will be a Qualitative meta-analysis conducted as most of the research I have observed has been qualitative surveys and case studies, so this method will help when investigating my particular research question of how the current research compares to each other. The software I will use will be R, and the package of {\em metafor} as it includes all the necessary functions for meta-analysis \cite{Hansen2022}. 
+
+
+\section{Discussion}
+\label{sec:fittedwithdependence}
+
+I expect to find that the research that brings in multiple covariates and diverse locations will perform the best, as the multiple correlation coefficients being examined improves the validity of research in finding the best causal variables. It might also become evident that there are holes in the current research methods, like not including land use types and density as variables, or focusing on survey style research instead of more quantitative methods. By synthesizing the research and coming to a conclusion on the most effective research, there could be also be the potential for a standardized practice for looking at cycling issues at a local level and determining what interventions are needed. If the results of this intervention are not what I expected, then that would also be useful in determining what how the field of research should pivot and which methods to focus on in the future if not the obvious path. 
+
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+To conclude, my project will be to consolidate and analyze the existing research on structural and social improvements for cycling. This is a fairly niche topic, but I do believe in its importance. By bringing together all of this valuable research, and assessing different strategies for assessing improvement strategies, there would be potential advancements discovered for the practical implementation of infrastructure and social changes for cycling. 
+
+
+
+\bibliography{Citations}
+
+\end{document}
+%%% LocalWords: nonparametric semiparametric autocorrelation ARMA
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% ispell-personal-dictionary: ".aspell.en.pws"
+%%% fill-column: 80
+%%% eval: (auto-fill-mode 1)
+%%% End:
