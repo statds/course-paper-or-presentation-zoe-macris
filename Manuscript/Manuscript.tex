@@ -18,7 +18,7 @@
 
 \usepackage[]{lineno}
 \linenumbers*[1]
-% %% patches to make lineno work better with amsmath
+
 \newcommand*\patchAmsMathEnvironmentForLineno[1]{%
  \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
  \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
@@ -54,19 +54,8 @@
 \newcommand{\blind}{0}
 
 
-%\title{On Misuses of the Kolmogorov--Smirnov Test for One-Sample Goodness-of-Fit}
-%
-%\author{Anthony Zeimbekakis\\
-%%   \href{mailto:anthony.zeimbekakis@uconn.edu}
-%% {\nolinkurl{anthony.zeimbekakis@uconn.edu}}\\
-  %Elizabeth D.  Schifano\\
-  %Jun Yan\\[1ex]
-  %Department of Statistics, University of Connecticut\\
-%}
-%\date{}
-
 \begin{document}
-%\maketitle
+
 
 \if0\blind
 {
@@ -117,9 +106,6 @@
 \section{Acknowledgements}
 \label{sec:acknow}
 
-
-\section{Appendix}
-\label{sec:appendix}
 
 \bibliography{Citations}
 
