@@ -19,25 +19,7 @@
 
 \usepackage[]{lineno}
 \linenumbers*[1]
-% %% patches to make lineno work better with amsmath
-\newcommand*\patchAmsMathEnvironmentForLineno[1]{%
- \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
- \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
- \renewenvironment{#1}%
- {\linenomath\csname old#1\endcsname}%
- {\csname oldend#1\endcsname\endlinenomath}}%
-\newcommand*\patchBothAmsMathEnvironmentsForLineno[1]{%
- \patchAmsMathEnvironmentForLineno{#1}%
- \patchAmsMathEnvironmentForLineno{#1*}}%
 
-\AtBeginDocument{%
- \patchBothAmsMathEnvironmentsForLineno{equation}%
- \patchBothAmsMathEnvironmentsForLineno{align}%
- \patchBothAmsMathEnvironmentsForLineno{flalign}%
- \patchBothAmsMathEnvironmentsForLineno{alignat}%
- \patchBothAmsMathEnvironmentsForLineno{gather}%
- \patchBothAmsMathEnvironmentsForLineno{multline}%
-}
 
 % control floats
 \renewcommand\floatpagefraction{.9}
@@ -54,8 +36,6 @@
 % NOTE: To produce blinded version, replace "0" with "1" below.
 \newcommand{\blind}{0}
 
-
-
 \setlength{\linewidth}{3in}
 
 \begin{document}
@@ -64,7 +44,8 @@
 \if0\blind
 {
   \title{\bf A Concise Survey on Statistical Analysis in Bike Lane Research}
-  \author{Zoe Macris}
+  \author{Zoe Macris\\
+  University of Connecticut}
 \date{December 2023}
   \maketitle} 
 
@@ -84,29 +65,62 @@
 
 Given that they have been around for just over 200 years, the bicycle has  evolved considerably in it's utility to us as a society. Originally just for hobbyists, and inhibitively expensive, they are now one of the most accessible modes of transport \cite{BIKE2023}. The World Health Organizations recommendation is a minimum of 150 minutes of moderate aerobic activity per week \citep{WHO2020}. This is difficult to achieve in our sedentary society, but cycling is an excellent form of exercise that can also double as the mode of transport for commuting and completing daily tasks. \par
 Statistical research and analysis on bike lanes provides crucial insights into the usage patterns, attitudes, commute rates, bicycle traffic and safety. This survey paper aims to provide an comprehensive examination of the existing body of statistical research into bike lines. With this, we hope to show trends in the research, give an overview of statistical findings and identify areas that can be further developed. \par
-The rest of the paper will be organized in the following manner. Section \ref{sec:Background} will present a background about bike lanes and why they are important. Section \ref{sec:methodanddata} will present how the survey was conducted. Section \ref{sec:disc} will discuss the findings and recommendations. Then \ref{sec:conc} will conclude the paper. 
+The rest of the paper will be organized in the following manner. Section \ref{sec:Background} will present a background about bike lanes and why they are important. Section \ref{sec:methodanddata} will present how the survey was conducted. Section \ref{sec:disc} will discuss the findings and recommendations. Then \ref{sec:conc} will conclude the paper.
 
 
 \section{Background}
 \label{sec:Background}
 
-Furthermore, according to \citet{Gtschi2015}, getting the appropriate amount of exercise has an estimated risk reduction of 30\% for all-cause mortality, including from cardiovascular disease, coronary heart disease, stroke, diabetes and cancer . It also can help people's mental health as well as physical, some studies have even demonstrated a decrease in depression symptoms from cycling for transportation \cite{Green2021}. \par
+\subsection{Benefits of Cycling}
+\label{sec:benefit}
+
+According to \citet{Gtschi2015}, getting the appropriate amount of exercise has an estimated risk reduction of 30\% for all-cause mortality, including from cardiovascular disease, coronary heart disease, stroke, diabetes and cancer . It also can help people's mental health as well as physical, some studies have even demonstrated a decrease in depression symptoms from cycling for transportation \cite{Green2021}. \par
 Beyond these individual benefits, cycling has a benefit for the environment and society as a whole. Transportation is a large source of greenhouse gas emissions for many countries \cite{Green2021}. In recent years, there has been even more emphasis on sustainable and environmentally conscious transportation options in urban areas. Cycling fits the these criteria and has risen to prominence as a viable sustainable mode of transportation. It is a form of active transportation, which is defined as human powered, and thus does not release greenhouse gas emissions. Bikes also take up considerable less space and require significantly less infrastructure than cars as an added benefit.\par 
-In order to promote cycling and make use of the benefits of alleviating traffic congestion, reduced emissions, and enhancing public health, it is  necessary to plan and evaluate cycling infrastructure, and bike lanes more specifically.
+In order to promote cycling and make use of the benefits of alleviating traffic congestion, reduced emissions, and enhancing public health, it is necessary to plan and evaluate cycling infrastructure, and bike lanes more specifically. Statistical analysis can come into play here and help prove whether bike lanes make a significant impact on the propensity of people cycling and their safety while doing it. 
+
+\subsection{Types of Infrastructure}
+\label{sec:bikeshare}
+
+The Connecticut State government describes the common facility types used to accommodate cyclists as Shared Roadways, Wide Curb-lanes, Bicycle Lanes and Multi-use Paths. 
+
 
 
 \section{Method and Data}
 \label{sec:methodanddata}
 
+\section{Results}
+\label{sec:results}
+
+\subsection{Correlation and Regression Analysis}
+\label{sec:corr}
+
+2, 4, 5 Binary Probit Regression Analysis.
+
+\subsection{Multiple Level Logistic Regression}
+\label{sec:mult}
+
+3. The paper from \citet{3Teixeira2020} uses Multipple Level Logistic Regression to analyze the impact of cycling in various cities with different cycling infrastructure on stress markers. This analysis resulted in the data shown in Table ~\ref{fig:stress}.
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{stresstable2.jpeg}
+    \caption{Distribution of Stress by City from Teixeira Study}
+    \label{fig:stress}
+\end{figure}
+
+
+\subsection{Generalized Linear Model}
+\label{sec:gen}
+
+
 
 \section{Discussion}
 \label{sec:disc}
 
-The paper by Mateo-Babiano takes the approach of using by Spearman correlation to analyse the effects of various cycling measures on usage, as can be seen in ~\ref{fig:Mateo-Babiano}
+The paper by Mateo-Babiano takes the approach of using by Spearman correlation to analyse the effects of various cycling measures on usage, as can be seen in ~\ref{table:MB}
 
 \begin{table}[tbp]
 \small
-\label{fig:Mateo-Babiano}
+\label{table:MB}
 \centering
 \caption{Length of bikeway by bikeway type in Brisbane and CityCycle areas. Spearman correlation of station usage and infrastructure type: from Mateo-Babiano paper}
 \begin{tabular}{l*{5}{p{1.5cm}}}
@@ -135,10 +149,6 @@ Separated Pathway & 1.8 & 1.3 & 0.29 & <0.0 \\
 
 \section{Acknowledgements}
 \label{sec:acknow}
-
-
-\section{Appendix}
-\label{sec:appendix}
 
 \bibliography{Citations}
 
