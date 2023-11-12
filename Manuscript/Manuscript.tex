@@ -106,34 +106,9 @@ The data in this survey paper is the types of statistical analyses conducted by 
 \subsection{Correlation and Regression Analysis}
 \label{sec:corr}
 
-2, 4, 5, 7 Binary Probit Regression Analysis.
+The correlation and regression analysis approach of statistical research on bicycle lanes is used to establish significant relationships amongst variables. In \citet{1MateoBabiano2016}, the approach using Spearman's correlation coefficient rho was used, which was suitable because the variables deviated from a normal distribution. The variables used were Public bicycle-sharing programs (PBSP) station usage frequency and length of bike-ways, which do not follow a normal distribution. The results of the Spearman correlation of station usage and infrastructure type can be seen in ~\ref{table:MB}, where shred pathways, bicycle paths, connections, and separated pathways were shown to have a significant impact on PBSP usage. 
+1, 2, 7 .
 
-\subsection{Multiple Level Logistic Regression}
-\label{sec:mult}
-
-3, 10. The paper from \citet{3Teixeira2020} uses Multipple Level Logistic Regression to analyze the impact of cycling in various cities with different cycling infrastructure on stress markers. This analysis resulted in the data shown in Table ~\ref{fig:stress}.
-\begin{figure}[tbp]
-    \centering
-    \includegraphics[width=0.5\textwidth]{stresstable2.jpeg}
-    \caption{Distribution of Stress by City from Teixeira Study}
-    \label{fig:stress}
-\end{figure}
-
-
-\subsection{Generalized Linear Model}
-\label{sec:gen}
-
-\subsection{Zero-inflated Poisson regression mode}
-\label{sec:pois}
-
-paper 8, 9
-
-
-
-\section{Discussion}
-\label{sec:disc}
-
-The paper by Mateo-Babiano takes the approach of using by Spearman correlation to analyse the effects of various cycling measures on usage, as can be seen in ~\ref{table:MB}
 
 \begin{table}[tbp]
 \small
@@ -156,6 +131,55 @@ Separated Pathway & 1.8 & 1.3 & 0.29 & <0.0 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+
+
+\subsection{Binary Regression Models}
+\label{sec:bin}
+
+In the paper by \citet{2Yujun2019}, binary probit regression analysis was used to analyze the choice of cycling for commuting, since the dependent variable to choice to bicycle to commute has two outcomes:
+
+\begin{itemize}
+    \item 0, the individual does not commute by cycling.
+    \item 1, the individual commuted by cycling at least once per week.
+\end{itemize}
+    
+For the binary model, a latent or unobserved variable y* is assumed that ranges from $\infty$ to $-\infty$, which is related to the independent variable by the equation $y^{*}_{i} = x_{i}\beta + \epsilon_{i}$. In the context of this survey paper, this latent variable are what underlies the decision making process of bicycle commuting. Where $X_{i}$ is a matrix of independent variables and $\beta$ is a vector of coefficients to be estimated and $\epsilon$ is random error \cite{LONG2001}. 
+
+
+
+papers 2, 5
+
+\subsection{Multiple Level  Regression Analysis}
+\label{sec:mult}
+
+4, 10. The paper from \citet{3Teixeira2020} uses Multiple Level Logistic Regression to analyze the impact of cycling in various cities with different cycling infrastructure on stress markers. This analysis resulted in the data shown in Table ~\ref{fig:stress}.
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{stresstable2.jpeg}
+    \caption{Distribution of Stress by City from Teixeira Study}
+    \label{fig:stress}
+\end{figure}
+
+Two types of models were used in \citet{4Buehler2011}, a log-log Ordinary Least Square (OLS) model "with the dependent variable being the bike commuters per 10,000 population. AS well as a Binary Logit Proportional model "with the share of bike commuters in each city as the dependent variable". This paper analyzed the role of cycling infrastructure on commutership by bike in 90 of the largest 100 U.S. cities. The OLS model is used for estimating coefficients of linear regression that describe the relationship between one or more quantitative independent variables and a dependent variable. With p explanatory variables, the OLS regression model is: 
+\[Y = \beta_{0}+\sum_{j=1,\dots, p}{\beta_{j}X_{j}}+\epsilon\]
+
+
+
+\subsection{Zero-inflated Poisson regression mode}
+\label{sec:pois}
+
+paper 8, 9
+
+\subsection{Generalized Linear Model}
+\label{sec:gen}
+
+paper 6
+
+\section{Discussion}
+\label{sec:disc}
+
+
 
 \section{Conclusion}
 \label{sec:conc}
