@@ -26,6 +26,12 @@
 
 \setlength{\linewidth}{3in}
 
+\providecommand{\keywords}[1]
+{
+  \small	
+  \textbf{\textit{Keywords---}} #1
+}
+
 \begin{document}
 %\maketitle
 
@@ -39,13 +45,12 @@
 
 %\doublespace
 
-\section{Abstract}
+\begin{abstract}
+This survey paper examines the evolving field of statistical analysis of bicycle lanes. Cycling has an evolving role in society, and has taken a place as a sustainable and accessible mode of transportation and exercise. In order for cycling to be accessible for the most number of people, investments into bike lanes and cycling infrastructure have to be made. Through an examination of existing studies, we explore the current trends in method to show whether bike lanes have a statistically significant effect on cycling outcomes. 
+\end{abstract}
 \label{sec:abstract}
 
-
-
-\section{Keywords}
-\label{sec:keywords}
+\keywords{Bike Lanes, Regression Analysis, Binary Regression Models, Multiple Level Regression Analysis, Zero-Inflated Poisson, Generalized Linear Model}
 
 
 \section{Introduction}
@@ -178,6 +183,12 @@ The Poisson model is also used in \citet{9Cantisani2021} to "address the randomn
 The final method identified from the surveyed papers was to use the generalized linear model to predict the vehicle delays caused by bicycle traffic versus other variables. Alongside this method, the cumulative curve method as used to extract traffic flow data from videos \cite{6Pu2017}. The basic model of the generalized linear model is:
 \[Y_{nx1} = X_{nxp}\beta_{px1}+\epsilon_{nx1}\]
 Where the matrix of observed values of dependent variables is  $Y_{nx1}$, $X_{nxp}$ is the matrix of observed explanatory variables, $\beta_{px1} =$ is the matrix of coefficients for explanatory variables, and $\epsilon_{nx1}$ is the error. Using this model is reported to help to understand how each factor contributed to the delay of cyclists on urban streets.   
+\begin{figure}[tbp]
+    \centering \includegraphics[width=1\textwidth]{BikeTrafficResults.png}
+    \caption{Results table from Research on Bicycle Traffic from Pu et al.}
+    \label{fig:traffic}
+\end{figure}
+
 
 \section{Discussion}
 \label{sec:disc}
