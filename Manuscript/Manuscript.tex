@@ -76,9 +76,17 @@ In order to promote cycling and make use of the benefits of alleviating traffic 
 \subsection{Types of Infrastructure}
 \label{sec:bikeshare}
 
-The Connecticut State government describes the common facility types used to accommodate cyclists as Shared Roadways, Wide Curb-lanes, Bicycle Lanes and Multi-use Paths.\par
+The Connecticut State government describes the common facility types used to accommodate cyclists as Shared Roadways (Informal On Road), Wide Curb-lanes, Bicycle Lanes and Multi-use Paths. The visuals in Figure ~\ref{fig:bikelane}, show an even wider array of potential infrastructures. In the U.S., commonly seen types are Bicycle Awareness Zones, Informal On Road and Bicycle Lanes as seen in the images. The supposition of much of the research analyzed here is that the more advanced the infrastructure is, the more likely people are to cycle \cite{1MateoBabiano2016}.\par 
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.75\textwidth]{Bikelane.jpg}
+    \caption{Bike Lane Comparison \cite{1MateoBabiano2016}}
+    \label{fig:bikelane}
+\end{figure}
+
 Shared roadways are where bicycle and automobile travel are allowed, all streets and roads other than controlled highways, are in this category. They do not provide any added protection to cyclists, but a street's designation as shared roadway indicates to cyclists that there are advantages to using the route over alternatives \cite{CTDOT2023}. \par 
-Wide curb lanes are still for sharing between bicycle and motorized traffic, but they provide more distance between bicyclists and vehicles and protection from high traffic speeds. They are created by widening roadways or narrowing traffic lanes, or both \cite{CTDOT2023}.\par 
+Wide curb lanes are still require sharing between bicycle and motorized traffic, but they provide more distance between bicyclists and vehicles and protection from high traffic speeds. They are created by widening roadways or narrowing traffic lanes, or both \cite{CTDOT2023}.\par 
 The category of bicycle lanes is defined as painted and signed lanes on the shoulder of streets, to improve conditions for bicyclists and to protect them from traffic volume and speed. Being designated as a bike lane street, means that more "pavements surface improvements, stronger sweeping programs, special signal facilities, etc" occur on them to increase safety and comfort for cyclists \cite{CTDOT2023}. \par
 The last level of cycling infrastructure is multi-use paths, on which cyclists have exclusive rights-of-way and don't cross The flow of automobiles more than necessary. These can be both recreational opportunities or high=speed commuter routes for cyclists \cite{CTDOT2023}. \par
 The research in this survey focuses on the infrastructure of bicycle lanes, and whether they are sufficient to increase the propensities of people to cycle, and their safety while they are cycling. 
@@ -181,10 +189,18 @@ The Poisson model is also used in \citet{9Cantisani2021} to "address the randomn
 \subsection{Generalized Linear Model}
 \label{sec:gen}
 
-The final method identified from the surveyed papers was to use the generalized linear model to predict the vehicle delays caused by bicycle traffic versus other variables. Alongside this method, the cumulative curve method as used to extract traffic flow data from videos \cite{6Pu2017}. The basic model of the generalized linear model is:
+The final method identified from the surveyed papers was to use the generalized linear model to predict the vehicle delays caused by bicycle traffic versus other variables. 
+
+\begin{figure}[hbt!]
+    \centering \includegraphics[width=1\textwidth]{6973089.fig.004a.png}
+    \caption{Relationship between bicycle flow and density}
+    \label{fig:flow}
+\end{figure}
+
+Alongside this method, the cumulative curve method as used to extract traffic flow data from videos \cite{6Pu2017}. The basic model of the generalized linear model is:
 \[Y_{nx1} = X_{nxp}\beta_{px1}+\epsilon_{nx1}\]
 Where the matrix of observed values of dependent variables is  $Y_{nx1}$, $X_{nxp}$ is the matrix of observed explanatory variables, $\beta_{px1} =$ is the matrix of coefficients for explanatory variables, and $\epsilon_{nx1}$ is the error. Using this model is reported to help to understand how each factor contributed to the delay of cyclists on urban streets.   
-\begin{figure}[tbp]
+\begin{figure}[hbt!]
     \centering \includegraphics[width=1\textwidth]{BikeTrafficResults.png}
     \caption{Results table from Research on Bicycle Traffic from Pu et al.}
     \label{fig:traffic}
