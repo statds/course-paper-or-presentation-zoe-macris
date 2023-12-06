@@ -1,6 +1,7 @@
 \documentclass[12pt, letterpaper]{article}
 %\documentclass[12pt, letterpaper, titlepage]{article}
 
+\usepackage{setspace} \doublespacing
 \usepackage{amsmath}
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -159,8 +160,16 @@ In the paper by \citet{2Yujun2019}, binary probit regression analysis was used t
     
 For the binary model, a latent or unobserved variable y* is assumed that ranges from $\infty$ to $-\infty$, which is related to the independent variable by the equation $y^{*}_{i} = x_{i}\beta + \epsilon_{i}$. In the context of this survey paper, this latent variable are what underlies the decision making process of bicycle commuting. Where $X_{i}$ is a matrix of independent variables and $\beta$ is a vector of coefficients to be estimated and $\epsilon$ is random error \cite{LONG2001}. 
 
-The binary logistic regression model is also used in this field of statistical research to predict the likelihood of a successful event occurring, like a high number of cycling routes close to green areas \cite{5CamposSnchez2019}. In order to conduct this model, all the variables had to be recoded to dichotomous categorical variables (1-0). For example, bicycle racks where 1=bicycle racks in buffer area, 0= no bicycle racks. 
+The binary logistic regression model is also used in this field of statistical research to predict the likelihood of a successful event occurring, like a high number of cycling routes close to green areas \cite{5CamposSnchez2019}. Binary logistic regression serves as an indispensable tool in predictive modeling due to its versatile applications and tailored approach to analyzing binary dependent variables. Unlike linear regression, which is suitable for predicting continuous values, binary logistic regression is specifically designed for situations where the outcome is dichotomous, such as survival vs. death, presence vs. absence, or default vs. non-default in loan scenarios. In the case of \citet{5CamposSnchez2019}, multiple variables are coded 1-0 in a binary fashion and can be seen in Table ~\ref{fig:vartable}. \par
+\begin{figure}[hbt!]
+    \centering \includegraphics[width=1\textwidth]{vartable.png}
+    \caption{Variable Table for Binary Logistic Regression Model}
+    \label{fig:vartable}
+\end{figure}
 
+One of the prime reasons for favoring binary logistic regression over linear regression for binary outcomes is the inherent nature of the dependent variable. In logistic regression, the model predicts the probability that the dependent variable will assume a value of 1. This probability is modeled using a logit function, ensuring the estimation of the relationship between independent variables and the probability of the event occurring.
+
+The logistic regression model itself relies on statistical estimation methods, primarily the maximum likelihood estimation. This method aids in determining the coefficients of the model, such as 'B0' to 'Bk', which correspond to the influence of each independent variable on the log odds of the binary outcome. These coefficients are estimated using iterative algorithms like Fisher scoring or the Newton-Raphson method, allowing for practical implementation using programming languages like R or Python \cite{Penman_2022}.
 
 \subsection{Multiple Level  Regression Analysis}
 \label{sec:mult}
@@ -192,14 +201,14 @@ The Poisson model is also used in \citet{9Cantisani2021} to "address the randomn
 The final method identified from the surveyed papers was to use the generalized linear model to predict the vehicle delays caused by bicycle traffic versus other variables. 
 
 \begin{figure}[hbt!]
-    \centering \includegraphics[width=1\textwidth]{6973089.fig.004a.png}
+    \centering \includegraphics[width=1\textwidth]{flowdensity.png}
     \caption{Relationship between bicycle flow and density}
     \label{fig:flow}
 \end{figure}
 
 Alongside this method, the cumulative curve method as used to extract traffic flow data from videos \cite{6Pu2017}. The basic model of the generalized linear model is:
 \[Y_{nx1} = X_{nxp}\beta_{px1}+\epsilon_{nx1}\]
-Where the matrix of observed values of dependent variables is  $Y_{nx1}$, $X_{nxp}$ is the matrix of observed explanatory variables, $\beta_{px1} =$ is the matrix of coefficients for explanatory variables, and $\epsilon_{nx1}$ is the error. Using this model is reported to help to understand how each factor contributed to the delay of cyclists on urban streets.   
+Where the matrix of observed values of dependent variables is  $Y_{nx1}$, $X_{nxp}$ is the matrix of observed explanatory variables, $\beta_{px1} =$ is the matrix of coefficients for explanatory variables, and $\epsilon_{nx1}$ is the error. Using this model is reported to help to understand how each factor contributed to the delay of cyclists on urban streets. In Table ~\ref{fig:traffic}, the results are show of Flow vs Density.   
 \begin{figure}[hbt!]
     \centering \includegraphics[width=1\textwidth]{BikeTrafficResults.png}
     \caption{Results table from Research on Bicycle Traffic from Pu et al.}
