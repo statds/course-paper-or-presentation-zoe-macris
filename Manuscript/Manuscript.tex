@@ -47,7 +47,7 @@
 %\doublespace
 
 \begin{abstract}
-This survey paper examines the evolving field of statistical analysis of bicycle lanes. Cycling has an important role in society, and has taken a place as a sustainable and accessible mode of transportation and exercise. In order for cycling to be accessible for the most number of people, investments into bike lanes and cycling infrastructure have to be made. Through an examination of existing studies, we explore the current trends in method to show whether bike lanes have a statistically significant effect on cycling outcomes. 
+This survey paper examines the evolving field of statistical analysis of bicycle lanes. Cycling plays an important role in society, and has taken a place as a sustainable and accessible mode of transportation and exercise. In order for cycling to be accessible for the most number of people, investments into bike lanes and cycling infrastructure have to be made. Through an examination of existing studies, we explore the current trends in method to show whether bike lanes have a statistically significant effect on cycling outcomes. 
 \end{abstract}
 \label{sec:abstract}
 
@@ -160,7 +160,7 @@ In the paper by \citet{2Yujun2019}, binary probit regression analysis was used t
     
 For the binary model, a latent or unobserved variable y* is assumed that ranges from $\infty$ to $-\infty$, which is related to the independent variable by the equation $y^{*}_{i} = x_{i}\beta + \epsilon_{i}$. In the context of this survey paper, this latent variable are what underlies the decision making process of bicycle commuting. Where $X_{i}$ is a matrix of independent variables and $\beta$ is a vector of coefficients to be estimated and $\epsilon$ is random error \cite{LONG2001}. 
 
-The binary logistic regression model is also used in this field of statistical research to predict the likelihood of a successful event occurring, like a high number of cycling routes close to green areas \cite{5CamposSnchez2019}. Binary logistic regression serves as an indispensable tool in predictive modeling due to its versatile applications and tailored approach to analyzing binary dependent variables. Unlike linear regression, which is suitable for predicting continuous values, binary logistic regression is specifically designed for situations where the outcome is dichotomous, such as survival vs. death, presence vs. absence, or default vs. non-default in loan scenarios. In the case of \citet{5CamposSnchez2019}, multiple variables are coded 1-0 in a binary fashion and can be seen in Table ~\ref{fig:vartable}. \par
+The binary logistic regression model is also used in this field of statistical research to predict the likelihood of a successful event occurring, like a high number of cycling routes close to green areas \cite{5CamposSnchez2019}. Binary logistic regression serves as an indispensable tool in predictive modeling due to its versatile applications and tailored approach to analyzing binary dependent variables. Unlike linear regression, which is suitable for predicting continuous values, binary logistic regression is specifically designed for situations where the outcome is dichotomous, such as survival vs. death, presence vs. absence, or default vs. non-default in loan scenarios. In the case of \citet{5CamposSnchez2019}, multiple variables are coded 1-0 in a binary fashion and can be seen in Figure ~\ref{fig:vartable}. \par
 \begin{figure}[hbt!]
     \centering \includegraphics[width=1\textwidth]{vartable.png}
     \caption{Variable Table for Binary Logistic Regression Model}
@@ -174,8 +174,8 @@ The logistic regression model itself relies on statistical estimation methods, p
 \subsection{Multiple Level  Regression Analysis}
 \label{sec:mult}
 
-The paper from \citet{3Teixeira2020} uses Multiple Level Logistic Regression to analyze the impact of cycling in various cities with different cycling infrastructure on stress markers. This analysis resulted in the data shown in Table ~\ref{fig:stress}.
-\begin{figure}[tbp]
+The paper from \citet{3Teixeira2020} uses Multiple Level Logistic Regression to analyze the impact of cycling in various cities with different cycling infrastructure on stress markers. This analysis resulted in the data shown in Figure ~\ref{fig:stress}, of stress levels measured in different cities. The results of this research found that riding on a protected bike lane significantly reduces cyclists stress levels compared to cycling on the general use street.
+\begin{figure}[hbp!]
     \centering
     \includegraphics[width=0.5\textwidth]{stresstable2.jpeg}
     \caption{Distribution of Stress by City from Teixeira Study}
@@ -185,7 +185,7 @@ The paper from \citet{3Teixeira2020} uses Multiple Level Logistic Regression to 
 Two types of models were used in \citet{4Buehler2011}, a log-log Ordinary Least Square (OLS) model "with the dependent variable being the bike commuters per 10,000 population. As well as a Binary Logit Proportional model "with the share of bike commuters in each city as the dependent variable". This paper analyzed the role of cycling infrastructure on commutership by bike in 90 of the largest 100 U.S. cities. The OLS model is used for estimating coefficients of linear regression that describe the relationship between one or more quantitative independent variables and a dependent variable \cite{XLSTAT2023}. With p explanatory variables, the OLS regression model is: 
 \[Y = \beta_{0}+\sum_{j=1,\dots, p}{\beta_{j}X_{j}}+\epsilon\]
 
-In the group of papers selected, the multinomial logit (MNL) model was used to estimate the travel choice of bicycle for commuting \cite{10Zhao2013}. 
+In the group of papers addressed, the multinomial logit (MNL) model was used to estimate the travel choice of bicycle for commuting \cite{10Zhao2013}. 
 
 \subsection{Zero-inflated Poisson Regression Mode}
 \label{sec:pois}
@@ -198,21 +198,21 @@ The Poisson model is also used in \citet{9Cantisani2021} to "address the randomn
 \subsection{Generalized Linear Model}
 \label{sec:gen}
 
-The final method identified from the surveyed papers was to use the generalized linear model to predict the vehicle delays caused by bicycle traffic versus other variables. 
+The final method identified from the surveyed papers was to use the generalized linear model (GLM) to predict the vehicle delays caused by bicycle traffic versus other variables. The GLM has the benefit of being able to accommodate various types of response variables, including continuous, binary, count, and categorical data. It allows for different types of probability distributions such as Gaussian, Poisson, Binomial, etc., making it applicable in a wide range of scenarios. Additionally, GLMs are not restricted to normality assumptions, which makes them suitable for data that is distributed non-normally \cite{PennState2023}.
+
+Alongside this method, the cumulative curve method as used to extract traffic flow data from videos \cite{6Pu2017}. The basic model of the generalized linear model is:
+\[Y_{nx1} = X_{nxp}\beta_{px1}+\epsilon_{nx1}\]
+Where the matrix of observed values of dependent variables is  $Y_{nx1}$, $X_{nxp}$ is the matrix of observed explanatory variables, $\beta_{px1} =$ is the matrix of coefficients for explanatory variables, and $\epsilon_{nx1}$ is the error. Using this model is reported to help to understand how each factor contributed to the delay of cyclists on urban streets. In Figure ~\ref{fig:traffic}, the results are shown of results of the significance of multiple variables on vehicle delay, and it can be seen that with this method, bicycle and vehicle flow as well as the number of vehicle lanes, has a significant effect on vehicle delay. The results of flow vs. density are also shown in Figure ~\ref{fig:flow}, and reveals that the average bicycle speed decreases slightly as the density increases while  the flow is still increasing, and  when there is high density the variation of bicycle speed decreases a great deal. These results are also consistant across multople locations of urban streets. 
+\begin{figure}[hbt!]
+    \centering \includegraphics[width=1\textwidth]{BikeTrafficResults.png}
+    \caption{Results table from Research on Bicycle Traffic from Pu et al.}
+    \label{fig:traffic}
+\end{figure}
 
 \begin{figure}[hbt!]
     \centering \includegraphics[width=1\textwidth]{flowdensity.png}
     \caption{Relationship between bicycle flow and density}
     \label{fig:flow}
-\end{figure}
-
-Alongside this method, the cumulative curve method as used to extract traffic flow data from videos \cite{6Pu2017}. The basic model of the generalized linear model is:
-\[Y_{nx1} = X_{nxp}\beta_{px1}+\epsilon_{nx1}\]
-Where the matrix of observed values of dependent variables is  $Y_{nx1}$, $X_{nxp}$ is the matrix of observed explanatory variables, $\beta_{px1} =$ is the matrix of coefficients for explanatory variables, and $\epsilon_{nx1}$ is the error. Using this model is reported to help to understand how each factor contributed to the delay of cyclists on urban streets. In Table ~\ref{fig:traffic}, the results are show of Flow vs Density.   
-\begin{figure}[hbt!]
-    \centering \includegraphics[width=1\textwidth]{BikeTrafficResults.png}
-    \caption{Results table from Research on Bicycle Traffic from Pu et al.}
-    \label{fig:traffic}
 \end{figure}
 
 
