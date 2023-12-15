@@ -183,18 +183,21 @@ The paper from \citet{3Teixeira2020} uses Multiple Level Logistic Regression to 
     \label{fig:stress}
 \end{figure}
 
-Two types of models were used in \citet{4Buehler2011}, a log-log Ordinary Least Square (OLS) model "with the dependent variable being the bike commuters per 10,000 population. As well as a Binary Logit Proportional model "with the share of bike commuters in each city as the dependent variable". This paper analyzed the role of cycling infrastructure on commutership by bike in 90 of the largest 100 U.S. cities. The OLS model is used for estimating coefficients of linear regression that describe the relationship between one or more quantitative independent variables and a dependent variable \cite{XLSTAT2023}. With p explanatory variables, the OLS regression model is: 
-\[Y = \beta_{0}+\sum_{j=1,\dots, p}{\beta_{j}X_{j}}+\epsilon\]
+Two types of models were used in \citet{4Buehler2011}, a log-log Ordinary Least Square (OLS) model "with the dependent variable being the bike commuters per 10,000 population. As well as a Binary Logit Proportional model "with the share of bike commuters in each city as the dependent variable". This paper analyzed the role of cycling infrastructure on commuter-ship by bike in 90 of the largest 100 U.S. cities. The OLS model is used for estimating coefficients of linear regression that describe the relationship between one or more quantitative independent variables and a dependent variable \cite{XLSTAT2023}. With p explanatory variables, the OLS regression model is given by equation \ref{eq:1}: 
+\begin{equation} \label{eq:1}
+Y = \beta_{0}+\sum_{j=1,\dots, p}{\beta_{j}X_{j}}+\epsilon\
+\end{equation}
+
 
 In the group of papers addressed, the multinomial logit (MNL) model was used to estimate the travel choice of bicycle for commuting \cite{10Zhao2013}. Multilevel models, unlike traditional regression approaches, offer several crucial advantages. Firstly, they accurately handle hierarchical data structures, avoiding underestimation of standard errors and overstating statistical significance by recognizing and accounting for group-level variability. Secondly, these models address substantive inquiries related to group effects, crucial in scenarios like transportation mode to work choices or identifying 'outlying' groups, providing insights into value-added effects at different levels. Thirdly, they enable simultaneous estimation of group effects and group-level predictors without confounding their impacts, which can't be separated in fixed effects models. Lastly, multilevel models permit inference to a population of groups, treating sampled groups as a random sample from a larger population, unlike fixed effects models, which restrict inferences solely to the sampled groups. These benefits collectively enhance the accuracy, depth, and scope of analyses, particularly in understanding complex hierarchical data structures and their effects \cite{Rasbash_2023}.
 
-\subsection{Zero-inflated Poisson Regression Mode}
+\subsection{Zero-inflated Poisson Regression Model}
 \label{sec:pois}
 
 A different approach that was used in the research into bike lanes was to use a zero-inflated Poisson regression model to estimate the change in cycle-motor vehicle collisions \cite{8Bhatia2016}. This model is used since the design is looking at collision rates pre to post instillation of bike lanes, and since the model allows for an over-abundance of zero counts in the data \cite{Giles2010}. The Poisson distribution's p.m.f is:
 \[P(Y=y) = \exp{(-\lambda)\lambda^{y}}/y!\]
 
-The Poisson model is also used in \citet{9Cantisani2021} to "address the randomness due to the perception and decision of road users at the intersections", as their research is specifically on the crash likelihood of cyclists at roundabouts with different infrastructure types. 
+The Poisson model is also used in \citet{9Cantisani2021} to "address the randomness due to the perception and decision of road users at the intersections", as their research is specifically on the crash likelihood of cyclists at roundabouts with different infrastructure types. Zero-inflated models, by assigning a non-zero probability of observing one or more occurrences (like crashes), avoid assuming inherent safety or non-safety in intersections. Due to these reasons, zero-inflated models are useful for analyzing crash count data. It's important to note that zero-inflated models are not as always superior for crash counts, but they are a viable option to consider for bike crash research \cite{Pew_Warr_Schultz_Heaton_2020}. 
 
 \subsection{Generalized Linear Model}
 \label{sec:gen}
