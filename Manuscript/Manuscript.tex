@@ -4,50 +4,31 @@
 \usepackage{setspace} \doublespacing
 \usepackage{amsmath}
 \usepackage{booktabs}
-\usepackage{amsthm}
 \usepackage{graphicx}
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
 \hypersetup{colorlinks = true, linkcolor = blue, citecolor=blue, urlcolor = blue}
 \usepackage{enumitem}
-\usepackage{setspace}
-\usepackage{lipsum}
-\usepackage{siunitx}
 \usepackage[square,numbers]{natbib}
 \bibliographystyle{abbrvnat}
-
-
-
 \usepackage[]{lineno}
 \linenumbers*[1]
-
-
-% NOTE: To produce blinded version, replace "0" with "1" below.
-\newcommand{\blind}{0}
-
 \setlength{\linewidth}{3in}
-
 \providecommand{\keywords}[1]
 {
   \small	
   \textbf{\textit{Keywords---}} #1
 }
-
 \begin{document}
-%\maketitle
 
-\if0\blind
-{
-  \title{\bf A Concise Survey on Statistical Analysis in Bike Lane Research}
+{\title{\bf A Concise Survey on Statistical Analysis in Bike Lane Research}
   \author{Zoe Macris\\
   University of Connecticut}
 \date{December 2023}
   \maketitle} 
 
-%\doublespace
-
 \begin{abstract}
-This survey paper examines the evolving field of statistical analysis of bicycle lanes. Cycling plays an important role in society, and has taken a place as a sustainable and accessible mode of transportation and exercise. In order for cycling to be accessible for the most number of people, investments into bike lanes and cycling infrastructure have to be made. Through an examination of existing studies, we explore the current trends in method to show whether bike lanes have a statistically significant effect on cycling outcomes. 
+This survey paper examines the evolving field of statistical analysis of bicycle lanes. Cycling plays an important role in society, and has taken a place as a sustainable and accessible mode of transportation and exercise. In order for cycling to be accessible for the most number of people, investments into bike lanes and cycling infrastructure have been made. Through an examination of existing studies, we explore the current trends in statistical methods to show whether certain types of infrastructure have a significant effect on cycling outcomes. 
 \end{abstract}
 \label{sec:abstract}
 
@@ -57,7 +38,7 @@ This survey paper examines the evolving field of statistical analysis of bicycle
 \section{Introduction}
 \label{sec:intro}
 
-Given that they have been around for just over 200 years, the bicycle has  evolved considerably in it's utility to us as a society. Originally just for hobbyists, and inhibitively expensive, they are now one of the most accessible modes of transport \cite{BIKE2023}. The World Health Organizations recommendation is a minimum of 150 minutes of moderate aerobic activity per week \citep{WHO2020}. This is difficult to achieve in our sedentary society, but cycling is an excellent form of exercise that can also double as the mode of transport for commuting and completing daily tasks. \par
+Given that bikes have been around for just over 200 years, it is unsurprising that they have evolved considerably in their utility to us as a society in that time. Originally just for hobbyists, and inhibitively expensive, they are now one of the most accessible modes of transport \cite{BIKE2023}. Biking is an exceptional form of exercise and is a great way to achieve the World Health Organizations recommendation of a minimum of 150 minutes of moderate aerobic activity per week \citep{WHO2020}. This is difficult to achieve in our sedentary society, but doable with cycling since it is a form of exercise that can also double as the mode of transport for commuting and completing daily tasks. \par
 Statistical research and analysis on bike lanes provides crucial insights into the usage patterns, attitudes, commute rates, bicycle traffic and safety. Other survey papers on research into bike lanes have neglected to focus on the statistical analyses used in the research \cite{7Mlenberg2019}. This survey paper aims to provide an comprehensive examination of the existing body of statistical research into bike lines. With this, we hope to show trends in the research, give an overview of statistical findings and identify areas that can be further developed. \par
 The rest of the paper will be organized in the following manner. Section \ref{sec:Background} will present a background about bike lanes and why they are important. Section \ref{sec:methodanddata} will present how the survey was conducted. Section \ref{sec:disc} will discuss the findings and recommendations. Then \ref{sec:conc} will conclude the paper.
 
@@ -65,38 +46,38 @@ The rest of the paper will be organized in the following manner. Section \ref{se
 \section{Background}
 \label{sec:Background}
 
-In order to understand the research into bike lanes, these topics should be understood. 
+In order to understand the significance of research into bike lanes, these following topics should be understood. 
 
 \subsection{Benefits of Cycling}
 \label{sec:benefit}
 
 According to \citet{Gtschi2015}, getting the appropriate amount of exercise has an estimated risk reduction of 30\% for all-cause mortality, including from cardiovascular disease, coronary heart disease, stroke, diabetes and cancer . It also can help people's mental health as well as physical, some studies have even demonstrated a decrease in depression symptoms from cycling for transportation \cite{Green2021}. \par
-Beyond these individual benefits, cycling has a benefit for the environment and society as a whole. Transportation is a large source of greenhouse gas emissions for many countries \cite{Green2021}. In recent years, there has been even more emphasis on sustainable and environmentally conscious transportation options in urban areas. Cycling fits the these criteria and has risen to prominence as a viable sustainable mode of transportation. It is a form of active transportation, which is defined as human powered, and thus does not release greenhouse gas emissions. Bikes also take up considerable less space and require significantly less infrastructure than cars as an added benefit.\par 
-In order to promote cycling and make use of the benefits of alleviating traffic congestion, reduced emissions, and enhancing public health, it is necessary to plan and evaluate cycling infrastructure, and bike lanes more specifically. Statistical analysis can come into play here and help prove whether bike lanes make a significant impact on the propensity of people cycling and their safety while doing it. 
+Beyond these individual benefits, cycling has a benefit for the environment and society as a whole. Transportation is a large source of greenhouse gas emissions for many countries \cite{Green2021}. In recent years, there has been even more emphasis on sustainable and environmentally conscious transportation options in urban areas. Cycling fits these criteria and has risen to prominence as a sustainable mode of transportation. It is a form of active transportation, which is term defined as human powered, and thus does not release greenhouse gas emissions. Bikes also take up considerable less space and require significantly less infrastructure than cars as an added benefit.\par 
+In order to promote cycling and make use of the benefits of alleviating traffic congestion, reduced emissions, and enhancing public health, it is necessary to plan and evaluate cycling infrastructure. Especially different forms of bike lanes, as this is commonly the only cycling infrastructure in the U.S. Statistical analysis comes into play here and can help prove whether bike lanes make a significant impact on the propensity of people cycling and their safety while doing it. 
 
 \subsection{Types of Infrastructure}
 \label{sec:bikeshare}
 
-The Connecticut State government describes the common facility types used to accommodate cyclists as Shared Roadways (Informal On Road), Wide Curb-lanes, Bicycle Lanes and Multi-use Paths. The visuals in Figure ~\ref{fig:bikelane}, show an even wider array of potential infrastructures. In the U.S., commonly seen types are Bicycle Awareness Zones, Informal On Road and Bicycle Lanes as seen in the images. The supposition of much of the research analyzed here is that the more advanced the infrastructure is, the more likely people are to cycle \cite{1MateoBabiano2016}.\par 
+The Connecticut State government describes the common facility types used to accommodate cyclists as Shared Roadways (Informal On Road), Wide Curb-lanes, Bicycle Lanes and Multi-use Paths. The visuals in Figure ~\ref{fig:bikelane}, show an even wider array of potential infrastructures. In the U.S., commonly seen types are Bicycle Awareness Zones, Informal On Road and Bicycle Lanes. The supposition of much of the research analyzed here is that the more advanced the infrastructure is, the more likely people are to cycle \cite{1MateoBabiano2016}.\par 
 
-\begin{figure}[hbt!]
+\begin{figure}[tbp]
     \centering
     \includegraphics[width=0.75\textwidth]{Bikelane.jpg}
     \caption{Bike Lane Comparison \cite{1MateoBabiano2016}}
     \label{fig:bikelane}
 \end{figure}
 
-Shared roadways are where bicycle and automobile travel are allowed, all streets and roads other than controlled highways, are in this category. They do not provide any added protection to cyclists, but a street's designation as shared roadway indicates to cyclists that there are advantages to using the route over alternatives \cite{CTDOT2023}. \par 
+Shared roadways are where bicycle and automobile traffic are allowed, all streets and roads other than controlled highways, are in this category. They do not provide any added protection to cyclists, but a street's designation as shared roadway indicates to cyclists that there are advantages to using the route over alternatives \cite{CTDOT2023}. \par 
 Wide curb lanes are still require sharing between bicycle and motorized traffic, but they provide more distance between bicyclists and vehicles and protection from high traffic speeds. They are created by widening roadways or narrowing traffic lanes, or both \cite{CTDOT2023}.\par 
 The category of bicycle lanes is defined as painted and signed lanes on the shoulder of streets, to improve conditions for bicyclists and to protect them from traffic volume and speed. Being designated as a bike lane street, means that more "pavements surface improvements, stronger sweeping programs, special signal facilities, etc" occur on them to increase safety and comfort for cyclists \cite{CTDOT2023}. \par
 The last level of cycling infrastructure is multi-use paths, on which cyclists have exclusive rights-of-way and don't cross The flow of automobiles more than necessary. These can be both recreational opportunities or high=speed commuter routes for cyclists \cite{CTDOT2023}. \par
-The research in this survey focuses on the infrastructure of bicycle lanes, and whether they are sufficient to increase the propensities of people to cycle, and their safety while they are cycling. 
+The bulk of research in this survey focuses on the infrastructure of bicycle lanes, and whether they are sufficient to increase the propensities of people to cycle, and their safety while they are cycling. 
 
 
 \section{Method and Data}
 \label{sec:methodanddata}
 
-To conduct this comprehensive survey of statistical analyses on bike lanes, a search was conducted of academic databases such as Science Direct, ProQuest, MDPI, and PubMed. These searches were conducted through the University of Connecticut library of Databases to ensure they were papers that were a able to be accessed. Specific terms were used including "bike lane", "statistical analysis", and "cycling infrastructure" in order to identify relevant papers. The date range for literature was defined as 2012 to the present, upon evaluation of typical date range of the available literature. \par
+To conduct this comprehensive survey of statistical analyses on bike lanes, a search was conducted of the academic databases Science Direct, ProQuest, MDPI, and PubMed. These searches were conducted through the University of Connecticut library of Databases to ensure that the full content of the papers could be viewed. Specific terms were used including "bike lane", "statistical analysis", and "cycling infrastructure" in order to identify relevant papers. The date range for literature was defined as 2012 to the present, upon evaluation of the typical date range of the available literature. \par
 
 \subsection{Criteria of Inclusion and Exclusion}
 \label{sec:inc}
@@ -112,7 +93,7 @@ Literature was included in the survey if it met these criteria:
 \subsection{Data}
 \label{sec:data}
 
-The data in this survey paper is the types of statistical analyses conducted by the identified literature from method given above. A selection of eleven papers resulted from this, and the approach used to identify relevant data from the papers to be discussed in the survey paper was done as follows. The specific type of statistical analysis conducted in the paper was identified. Alongside the method and variables used by the researchers in the study. The results from the data collection are displayed in ~\ref{sec:results}. 
+The data in this survey paper is the types of statistical analyses conducted by the identified literature from method given above. A selection of eleven papers resulted from this, and the approach used to identify relevant data from the papers to be discussed in the survey paper was done as follows. The specific type of statistical analysis conducted in the paper was identified, alongside the method and variables used by the researchers in the study. The results from the data collection are discussed in Section~\ref{sec:results}. 
 
 \section{Results}
 \label{sec:results}
@@ -120,8 +101,8 @@ The data in this survey paper is the types of statistical analyses conducted by 
 \subsection{Correlation and Regression Analysis}
 \label{sec:corr}
 
-The correlation and regression analysis approach of statistical research on bicycle lanes is used to establish significant relationships amongst variables. In \citet{1MateoBabiano2016}, the approach using Spearman's correlation coefficient rho was used, which was suitable because the variables deviated from a normal distribution. The variables used were Public bicycle-sharing programs (PBSP) station usage frequency and length of bike-ways, which do not follow a normal distribution. The results of the Spearman correlation of station usage and infrastructure type can be seen in Table ~\ref{table:MB}, where shared pathways, bicycle paths, connections, and separated pathways were shown to have a significant impact on PBSP usage. \par
-Other analyses used include Differences-in-Differences, Pearson's R correlation coefficient, Panel regressions, and Counterfactual based on control \cite{Karpinski2021}. These were used when the data being analyzed was usership of Boston's bike share program before and after the addition of bike lanes. 
+The correlation and regression analysis approach of statistical research on bicycle lanes is used to establish significant relationships amongst variables. In \citet{1MateoBabiano2016}, the approach using Spearman's correlation coefficient rho was used, which was suitable because the variables deviated from a normal distribution. The variables used were Public bicycle-sharing programs (PBSP) station usage frequency and length of bike-ways, which do not follow a normal distribution. The results of the Spearman correlation of station usage and infrastructure type can be seen in Table ~\ref{table:MB}, where shared pathways, bicycle paths, connections, and separated pathways were shown to have a significant impact on PBSP usage. 
+Other analyses used include Differences-in-Differences, Pearson's R correlation coefficient, Panel regressions, and Counterfactual based on control \cite{Karpinski2021}. These were used when the data being analyzed was user-ship of Boston's bike share program before and after the addition of bike lanes. 
 
 
 
@@ -147,7 +128,7 @@ Separated Pathway & 1.8 & 1.3 & 0.29 & <0.0 \\
 \end{tabular}
 \end{table}
 
-While a fairly simple technique, basic regression and correlation analyses are a fundamental statistical tools offering multiple advantages in data exploration and analysis. These techniques  allow for the understanding and quantification of relationships between variables. Regression analysis not only reveals the nature and strength of connections between dependent and independent variables, but also aids in prediction and model interpretation. It serves as a basis for decision-making by allowing insights into influential data points, model comparison, and assumption checking. Similarly, correlation analysis succinctly measures the degree and direction of association between two  variables, which gives a simple but effective way to summarizing their relationship \cite{Bewick_Cheek_Ball_2003}. All in all, these basic analyses provide crucial foundations for further statistical modeling, making them indispensable in the field of what variable affecting cycling will provide the greatest increase in bike share usage. Even though it is a simple technique, we are able to tell that there is a significant relationship between shared pathways, bicycle paths and separated pathways on the amount of bike share station usage. Which provides a solid foundation of evidence on how to improve cycling infrastructure in urban areas. 
+While a fairly simple technique, basic regression and correlation analyses are a fundamental statistical tool offering multiple advantages in data exploration and analysis. These techniques  allow for the understanding and quantification of relationships between variables. Regression analysis not only reveals the nature and strength of connections between dependent and independent variables, but also aids in prediction and model interpretation. It serves as a basis for decision-making by allowing insights into influential data points, model comparison, and assumption checking. Similarly, correlation analysis succinctly measures the degree and direction of association between two  variables, which gives a simple but effective way to summarizing their relationship \cite{Bewick_Cheek_Ball_2003}. All in all, these basic analyses provide crucial foundations for further statistical modeling, making them indispensable in telling what variable affecting cycling will provide the greatest increase in bike share usage. Even though it is a simple technique, we are able to tell in \citet{1MateoBabiano2016} that there is a significant relationship between shared pathways, bicycle paths and separated pathways on the amount of bike share station usage. Which provides a solid foundation of evidence on how to improve cycling infrastructure in urban areas. 
 
 \subsection{Binary Regression Models}
 \label{sec:bin}
@@ -161,9 +142,10 @@ In the paper by \citet{2Yujun2019}, binary probit regression analysis was used t
     
 For the binary model, a latent or unobserved variable y* is assumed that ranges from $\infty$ to $-\infty$, which is related to the independent variable by the equation $y^{*}_{i} = x_{i}\beta + \epsilon_{i}$. In the context of this survey paper, this latent variable are what underlies the decision making process of bicycle commuting. Where $X_{i}$ is a matrix of independent variables and $\beta$ is a vector of coefficients to be estimated and $\epsilon$ is random error \cite{LONG2001}. 
 
-The binary logistic regression model is also used in this field of statistical research to predict the likelihood of a successful event occurring, like a high number of cycling routes close to green areas \cite{5CamposSnchez2019}. Binary logistic regression serves as an indispensable tool in predictive modeling due to its versatile applications and tailored approach to analyzing binary dependent variables. Unlike linear regression, which is suitable for predicting continuous values, binary logistic regression is specifically designed for situations where the outcome is dichotomous, such as survival vs. death, presence vs. absence, or default vs. non-default in loan scenarios. In the case of \citet{5CamposSnchez2019}, multiple variables are coded 1-0 in a binary fashion and can be seen in Figure ~\ref{fig:vartable}. \par
-\begin{figure}[hbt!]
-    \centering \includegraphics[width=1\textwidth]{vartable.png}
+The binary logistic regression model is also used in the field of statistical research on bike lanes to predict the likelihood of a successful event occurring, like a high number of cycling routes close to green areas \cite{5CamposSnchez2019}. Binary logistic regression serves as an indispensable tool in predictive modeling due to its versatile applications and tailored approach to analyzing binary dependent variables. Unlike linear regression, which is suitable for predicting continuous values, binary logistic regression is specifically designed for situations where the outcome is dichotomous, such as survival vs. death, presence vs. absence, or default vs. non-default in loan scenarios. In the case of \citet{5CamposSnchez2019}, multiple variables are coded 1-0 in a binary fashion and can be seen in Figure~\ref{fig:vartable}. \par
+
+\begin{figure}[tbp]
+    \centering \includegraphics[width=0.8\textwidth]{vartable.png}
     \caption{Variable Table for Binary Logistic Regression Model}
     \label{fig:vartable}
 \end{figure}
@@ -175,52 +157,52 @@ The logistic regression model itself relies on statistical estimation methods, p
 \subsection{Multiple Level  Regression Analysis}
 \label{sec:mult}
 
-The paper from \citet{3Teixeira2020} uses Multiple Level Logistic Regression to analyze the impact of cycling in various cities with different cycling infrastructure on stress markers. This analysis resulted in the data shown in Figure ~\ref{fig:stress}, of stress levels measured in different cities. The results of this research found that riding on a protected bike lane significantly reduces cyclists stress levels compared to cycling on the general use street.
-\begin{figure}[hbp!]
+Multiple Level Logistic Regression is used in the paper from \citet{3Teixeira2020} to analyze the impact of cycling infrastructure in different cities on stress markers. This analysis resulted in the data shown in Figure ~\ref{fig:stress}, of stress levels measured in different cities. The results of this research found that riding on a protected bike lane significantly reduces cyclists stress levels compared to cycling on a general use street.
+\begin{figure}[tbp]
     \centering
     \includegraphics[width=0.5\textwidth]{stresstable2.jpeg}
     \caption{Distribution of Stress by City from Teixeira Study}
     \label{fig:stress}
 \end{figure}
 
-Two types of models were used in \citet{4Buehler2011}, a log-log Ordinary Least Square (OLS) model "with the dependent variable being the bike commuters per 10,000 population. As well as a Binary Logit Proportional model "with the share of bike commuters in each city as the dependent variable". This paper analyzed the role of cycling infrastructure on commuter-ship by bike in 90 of the largest 100 U.S. cities. The OLS model is used for estimating coefficients of linear regression that describe the relationship between one or more quantitative independent variables and a dependent variable \cite{XLSTAT2023}. With p explanatory variables, the OLS regression model is given by equation \ref{eq:1}: 
+Two types of models were used in \citet{4Buehler2011}, a log-log Ordinary Least Square (OLS) model with the dependent variable being the bike commuters per 10,000 population. As well as a Binary Logit Proportional model with the share of bike commuters from each city being the dependent variable. This paper analyzed the role of cycling infrastructure on commuter-ship by bike in 90 of the largest 100 U.S. cities. The OLS model is used for estimating coefficients of linear regression that describe the relationship between one or more quantitative independent variables and a dependent variable \cite{XLSTAT2023}. With p explanatory variables, the OLS regression model is given by equation \ref{eq:1}: 
+
 \begin{equation} \label{eq:1}
 Y = \beta_{0}+\sum_{j=1,\dots, p}{\beta_{j}X_{j}}+\epsilon\
 \end{equation}
 
-
-In the group of papers addressed, the multinomial logit (MNL) model was used to estimate the travel choice of bicycle for commuting \cite{10Zhao2013}. Multilevel models, unlike traditional regression approaches, offer several crucial advantages. Firstly, they accurately handle hierarchical data structures, avoiding underestimation of standard errors and overstating statistical significance by recognizing and accounting for group-level variability. Secondly, these models address substantive inquiries related to group effects, crucial in scenarios like transportation mode to work choices or identifying 'outlying' groups, providing insights into value-added effects at different levels. Thirdly, they enable simultaneous estimation of group effects and group-level predictors without confounding their impacts, which can't be separated in fixed effects models. Lastly, multilevel models permit inference to a population of groups, treating sampled groups as a random sample from a larger population, unlike fixed effects models, which restrict inferences solely to the sampled groups. These benefits collectively enhance the accuracy, depth, and scope of analyses, particularly in understanding complex hierarchical data structures and their effects \cite{Rasbash_2023}.
+In the group of papers addressed, the multinomial logit (MNL) model was most commonly used to estimate the travel choice of bicycle for commuting \cite{10Zhao2013}. Multilevel models, unlike traditional regression approaches, offer several crucial advantages. Firstly, they accurately handle hierarchical data structures, avoiding underestimation of standard errors and overstating statistical significance by recognizing and accounting for group-level variability. Secondly, these models address substantive inquiries related to group effects, crucial in scenarios like transportation mode to work choices or identifying 'outlying' groups, providing insights into value-added effects at different levels. Thirdly, they enable simultaneous estimation of group effects and group-level predictors without confounding their impacts, which can't be separated in fixed effects models. Lastly, multilevel models permit inference to a population of groups, treating sampled groups as a random sample from a larger population, unlike fixed effects models, which restrict inferences solely to the sampled groups. These benefits collectively enhance the depth of the analyses, particularly in understanding complex hierarchical data structures and their effects \cite{Rasbash_2023}.
 
 \subsection{Zero-inflated Poisson Regression Model}
 \label{sec:pois}
 
-A different approach that was used in the research into bike lanes was to use a zero-inflated Poisson regression model to estimate the change in cycle-motor vehicle collisions \cite{8Bhatia2016}. This model is used since the design is looking at collision rates pre to post instillation of bike lanes, and since the model allows for an over-abundance of zero counts in the data \cite{Giles2010}. The model uses the Poisson distribution's p.m.f which is given my equation \ref{eq:2}:
+Another approach  used in the research into bike lanes is a zero-inflated Poisson regression model to estimate the change in cycle-motor vehicle collisions \cite{8Bhatia2016}. This model was used since the design is looking at collision rates pre to post instillation of bike lanes, and since the model allows for an over-abundance of zero counts in the data \cite{Giles2010}. The model uses the Poisson distribution's p.m.f which is given by equation \ref{eq:2}:
 \begin{equation} \label{eq:2}
 P(Y=y) = \exp{(-\lambda)\lambda^{y}}/y!
 \end{equation}
 
-
-The Poisson model is also used in \citet{9Cantisani2021} to "address the randomness due to the perception and decision of road users at the intersections", as their research is specifically on the crash likelihood of cyclists at roundabouts with different infrastructure types. Zero-inflated models, by assigning a non-zero probability of observing one or more occurrences (like crashes), avoid assuming inherent safety or non-safety in intersections. Due to these reasons, zero-inflated models are useful for analyzing crash count data. It's important to note that zero-inflated models are not as always superior for crash counts, but they are a viable option to consider for bike crash research \cite{Pew_Warr_Schultz_Heaton_2020}. 
+The Poisson model is also used in \citet{9Cantisani2021} to "address the randomness due to the perception and decision of road users at the intersections", as their research is specifically on the crash likelihood of cyclists at roundabouts with different infrastructure types. Zero-inflated models, by assigning a non-zero probability of observing one or more occurrences (like crashes), avoid assuming inherent safety or non-safety in intersections. Due to these reasons, zero-inflated models are useful for analyzing crash count data. It is important to note that zero-inflated models are not always superior for crash counts, but they are a viable option to consider for bike crash research \cite{Pew_Warr_Schultz_Heaton_2020}. 
 
 \subsection{Generalized Linear Model}
 \label{sec:gen}
 
-The final method identified from the surveyed papers was to use the generalized linear model (GLM) to predict the vehicle delays caused by bicycle traffic versus other variables. The GLM has the benefit of being able to accommodate various types of response variables, including continuous, binary, count, and categorical data. It allows for different types of probability distributions such as Gaussian, Poisson, Binomial, etc., making it applicable in a wide range of scenarios. Additionally, GLMs are not restricted to normality assumptions, which makes them suitable for data that is distributed non-normally \cite{PennState2023}.
+The final method identified from the surveyed papers was the generalized linear model (GLM) being used to predict the vehicle delays caused by bicycle traffic versus other variables. The GLM has the benefit of being able to accommodate various types of response variables, including continuous, binary, count, and categorical data. It allows for different types of probability distributions such as Gaussian, Poisson, Binomial, etc., making it applicable in a wide range of scenarios. Additionally, GLMs are not restricted to normality assumptions, which makes them suitable for data that is distributed non-normally \cite{PennState2023}.
 
 Alongside this method, the cumulative curve method as used to extract traffic flow data from videos \cite{6Pu2017}. Equation \ref{eq:3} gives the basic model of the generalized linear model:
 \begin{equation}\label{eq:3}
 Y_{nx1} = X_{nxp}\beta_{px1}+\epsilon_{nx1}
 \end{equation}
-Where the matrix of observed values of dependent variables is  $Y_{nx1}$, $X_{nxp}$ is the matrix of observed explanatory variables, $\beta_{px1} =$ is the matrix of coefficients for explanatory variables, and $\epsilon_{nx1}$ is the error. Using this model is reported to help to understand how each factor contributed to the delay of cyclists on urban streets. In Figure ~\ref{fig:traffic}, the results are shown of results of the significance of multiple variables on vehicle delay, and it can be seen that with this method, bicycle and vehicle flow as well as the number of vehicle lanes, has a significant effect on vehicle delay. The results of flow vs. density are also shown in Figure ~\ref{fig:flow}, and reveals that the average bicycle speed decreases slightly as the density increases while  the flow is still increasing, and  when there is high density the variation of bicycle speed decreases a great deal. These results are also consistent across multiple locations of urban streets. 
-\begin{figure}[hbt!]
+Where the matrix of observed values of dependent variables is  $Y_{nx1}$, $X_{nxp}$ is the matrix of observed explanatory variables, $\beta_{px1} =$ is the matrix of coefficients for explanatory variables, and $\epsilon_{nx1}$ is the error. Using this model help us understand how each factor contributed to the delay of cyclists on urban streets. In Figure ~\ref{fig:traffic}, the results are shown of the significance of multiple variables on vehicle delay. It can be seen that with this method, bicycle and vehicle flow as well as the number of vehicle lanes, have a significant effect on vehicle delay. The results of flow vs. density are similarly shown in Figure ~\ref{fig:flow}, and reveals that the average bicycle speed decreases slightly as the density increases while the flow is still increasing, and  when there is high density the variation of bicycle speed decreases a great deal. These results are also consistent across multiple locations of urban streets. \par
+
+\begin{figure}[tbp]
     \centering \includegraphics[width=1\textwidth]{BikeTrafficResults.png}
-    \caption{Results table from Research on Bicycle Traffic from Pu et al.}
+    \caption{Results table from Research on Bicycle Traffic from \citet{6Pu2017}}
     \label{fig:traffic}
 \end{figure}
 
-\begin{figure}[hbt!]
+\begin{figure}[tbp]
     \centering \includegraphics[width=1\textwidth]{flowdensity.png}
-    \caption{Relationship between bicycle flow and density}
+    \caption{Relationship between bicycle flow and density from \citet{6Pu2017}}
     \label{fig:flow}
 \end{figure}
 
@@ -228,15 +210,15 @@ Where the matrix of observed values of dependent variables is  $Y_{nx1}$, $X_{nx
 \section{Discussion}
 \label{sec:disc}
 
-The findings from this survey paper show the multifaceted approaches being taken in the field of research into cycling infrastructure, and how important they are to encourage sustainable urban transportation. In this discussion section will include; key themes, criticisms, and potential future pathways for similar research. \par
+The findings from this survey paper show the multifaceted approaches being taken in the field of research into cycling infrastructure, and how important they are to encourage sustainable urban transportation. In this discussion section will include; important themes, criticisms, and potential future pathways for similar research. \par
 
-Investing in different types of cycling infrastructure, especially separated bike lanes, is shown in this body of research to have a significant impact on increasing cycling ridership. Whether it's an increase in bike-shares or commutership, this relationship is shown in the papers. This is essential when it comes to appealing to policy makers and decision makers in communities to convince them to add cycling infrastructure to their area. Statistical analyses are influential in providing actionable insights, including the correlation between infrastructure types existing in an area and increased cycling. \par
+Investing in different types of cycling infrastructure, especially separated bike lanes, is shown in this body of research to have a significant impact on increasing cycling ridership. Whether it is an increase in bike-shares or commutership, this relationship is shown in the research. This is essential when it comes to appealing to policy makers and decision makers in communities to convince them to add cycling infrastructure to their area. Statistical analyses are influential in providing actionable insights, including the correlation between infrastructure types existing in an area and increased cycling. \par
 
-Studies like \citet{1MateoBabiano2016} show how effective simple methods like Spearman's correlation coefficient can be at revealing the impact of bike lanes on PBSP usage. These sorts of results can lead to insights for urban planners when it comes to designing cities. Predictive models were also used, like binary regression models in \citet{2Yujun2019} to provide insight into all the factors influencing an individuals' choice to cycle for commuting. These predictive models offer ways for policy makers to encourage cycling as a successful commuting option in their cities.\par
+Studies like \citet{1MateoBabiano2016} show how effective simple methods like Spearman's correlation coefficient can be at revealing the impact of bike lanes on PBSP usage. These sorts of results can lead to important ideas for urban planners when it comes to designing cities. Predictive models were also used, like binary regression models in \citet{2Yujun2019} to provide insight into all the factors influencing an individuals' choice to cycle for commuting. These predictive models offer ways for policy makers to encourage cycling as a successful commuting option in their cities.\par
 
-Some future directions this field could go include focusing on more than just high socioeconomic areas. This type of research has only really been done in affluent countries, likely because a lot of the research has been based off of bike-share systems. Which leads into another point of improvements, where there could be better ways of collecting data on cyclists, as they are often excluding people who own their own bikes from the data. Additionally, there is room for more cost-benefit analyses on the economic impact of investing in cycling infrastructure. When you create such infrastructure, there could be less congestion and damage to the automobile infrastructure. Which would be beneficial to persuading policy makers towards creating more bike lanes and encouraging cycling. Further improvements in the field of statistical modeling to conduct bike lane research include using longitudinal studies, to track changes and trends, rather that just cross-sectional research at one point in time. \par
+Some improvements this field could make include focusing on more than just high socioeconomic class areas. This type of research has only really been done in affluent countries, specifically in affluent areas, likely because much of the research has been based off of bike-share systems. Which leads into another point of criticism, where there could be better ways of collecting data on cyclists, as they are often excluding people who own and ride their own bikes from the data. Additionally, there is room for more cost-benefit analyses on the economic impact of investing in cycling infrastructure. When you create well used bike lanes, there would then be less congestion and damage to automobile infrastructure. Focusing on this angle within bike lane research would be beneficial to persuading policy makers towards creating more bike lanes and encouraging cycling. 
 
-In addition, there is a lack of spatial analysis models in the current body of research on cycling infrastructure. These models, particularly spatial regression, Geographically Weighted Regression (GWR), or spatial auto correlation analysis, would be valuable for understanding spatial patterns. For instance, clustering of bike lane usage, or identifying hot-spots of accidents and injuries along bike lanes \cite{Kanade_2022}. It could also be beneficial to include causal inference techniques when studying cycling infrastructure. These tools, like directed acyclic graphs and instrumental variable analysis, could be appropriate for investigating the causal impact of interventions or policy changes related to bike lane infrastructure on outcomes like safety or usage of the infrastructure \cite{Pearce_Lawlor_2016}. 
+Further improvements for the future of the field of research into cycling infrastructure include using longitudinal studies to track changes and trends, rather that just cross-sectional research at one point in time. In addition, there is a lack of spatial analysis models in the current body of research. These models, particularly spatial regression, Geographically Weighted Regression (GWR), and spatial auto correlation analysis, would be valuable for understanding spatial patterns. For instance, clustering of bike lane usage, or identifying hot-spots of accidents and injuries along bike lanes \cite{Kanade_2022}. It could also be beneficial to include causal inference techniques when studying cycling infrastructure. These tools, like directed acyclic graphs and instrumental variable analysis, could be appropriate for investigating the causal impact of interventions or policy changes related to bike lane infrastructure on outcomes like safety or usage of the infrastructure \cite{Pearce_Lawlor_2016}. 
 
 \section{Conclusion}
 \label{sec:conc}
