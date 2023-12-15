@@ -194,8 +194,11 @@ In the group of papers addressed, the multinomial logit (MNL) model was used to 
 \subsection{Zero-inflated Poisson Regression Model}
 \label{sec:pois}
 
-A different approach that was used in the research into bike lanes was to use a zero-inflated Poisson regression model to estimate the change in cycle-motor vehicle collisions \cite{8Bhatia2016}. This model is used since the design is looking at collision rates pre to post instillation of bike lanes, and since the model allows for an over-abundance of zero counts in the data \cite{Giles2010}. The Poisson distribution's p.m.f is:
-\[P(Y=y) = \exp{(-\lambda)\lambda^{y}}/y!\]
+A different approach that was used in the research into bike lanes was to use a zero-inflated Poisson regression model to estimate the change in cycle-motor vehicle collisions \cite{8Bhatia2016}. This model is used since the design is looking at collision rates pre to post instillation of bike lanes, and since the model allows for an over-abundance of zero counts in the data \cite{Giles2010}. The model uses the Poisson distribution's p.m.f which is given my equation \ref{eq:2}:
+\begin{equation} \label{eq:2}
+P(Y=y) = \exp{(-\lambda)\lambda^{y}}/y!
+\end{equation}
+
 
 The Poisson model is also used in \citet{9Cantisani2021} to "address the randomness due to the perception and decision of road users at the intersections", as their research is specifically on the crash likelihood of cyclists at roundabouts with different infrastructure types. Zero-inflated models, by assigning a non-zero probability of observing one or more occurrences (like crashes), avoid assuming inherent safety or non-safety in intersections. Due to these reasons, zero-inflated models are useful for analyzing crash count data. It's important to note that zero-inflated models are not as always superior for crash counts, but they are a viable option to consider for bike crash research \cite{Pew_Warr_Schultz_Heaton_2020}. 
 
@@ -204,8 +207,10 @@ The Poisson model is also used in \citet{9Cantisani2021} to "address the randomn
 
 The final method identified from the surveyed papers was to use the generalized linear model (GLM) to predict the vehicle delays caused by bicycle traffic versus other variables. The GLM has the benefit of being able to accommodate various types of response variables, including continuous, binary, count, and categorical data. It allows for different types of probability distributions such as Gaussian, Poisson, Binomial, etc., making it applicable in a wide range of scenarios. Additionally, GLMs are not restricted to normality assumptions, which makes them suitable for data that is distributed non-normally \cite{PennState2023}.
 
-Alongside this method, the cumulative curve method as used to extract traffic flow data from videos \cite{6Pu2017}. The basic model of the generalized linear model is:
-\[Y_{nx1} = X_{nxp}\beta_{px1}+\epsilon_{nx1}\]
+Alongside this method, the cumulative curve method as used to extract traffic flow data from videos \cite{6Pu2017}. Equation \ref{eq:3} gives the basic model of the generalized linear model:
+\begin{equation}\label{eq:3}
+Y_{nx1} = X_{nxp}\beta_{px1}+\epsilon_{nx1}
+\end{equation}
 Where the matrix of observed values of dependent variables is  $Y_{nx1}$, $X_{nxp}$ is the matrix of observed explanatory variables, $\beta_{px1} =$ is the matrix of coefficients for explanatory variables, and $\epsilon_{nx1}$ is the error. Using this model is reported to help to understand how each factor contributed to the delay of cyclists on urban streets. In Figure ~\ref{fig:traffic}, the results are shown of results of the significance of multiple variables on vehicle delay, and it can be seen that with this method, bicycle and vehicle flow as well as the number of vehicle lanes, has a significant effect on vehicle delay. The results of flow vs. density are also shown in Figure ~\ref{fig:flow}, and reveals that the average bicycle speed decreases slightly as the density increases while  the flow is still increasing, and  when there is high density the variation of bicycle speed decreases a great deal. These results are also consistant across multople locations of urban streets. 
 \begin{figure}[hbt!]
     \centering \includegraphics[width=1\textwidth]{BikeTrafficResults.png}
